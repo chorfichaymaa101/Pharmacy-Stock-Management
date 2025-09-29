@@ -99,16 +99,16 @@ export const Navbar = ({ onMenuToggle, isMenuOpen }: NavbarProps) => {
                 <div className="w-8 h-8 bg-white/30 rounded-full flex items-center justify-center">
                   <User className="h-4 w-4 text-white" />
                 </div>
-                <span className="hidden md:block text-white text-sm font-medium">Dr. Smith</span>
+                <span className="hidden md:block text-white text-sm font-medium">Dr. Chaymaa</span>
               </Button>
             </DropdownMenuTrigger>
             <DropdownMenuContent align="end">
               <DropdownMenuLabel>My Account</DropdownMenuLabel>
               <DropdownMenuSeparator />
-              <DropdownMenuItem>Profile</DropdownMenuItem>
-              <DropdownMenuItem>Settings</DropdownMenuItem>
+              <DropdownMenuItem className='hover:bg-gradient-to-r hover:from-green-500 hover:to-teal-500 hover:text-white transition-colors duration-300'>Profile</DropdownMenuItem>
+              <DropdownMenuItem className='hover:bg-gradient-to-r hover:from-green-500 hover:to-teal-500 hover:text-white transition-colors duration-300'>Settings</DropdownMenuItem>
               <DropdownMenuSeparator />
-              <DropdownMenuItem>Sign out</DropdownMenuItem>
+              <DropdownMenuItem className='hover:bg-gradient-to-r hover:from-green-500 hover:to-teal-500 hover:text-white transition-colors duration-300'>Sign out</DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>
         </div>
