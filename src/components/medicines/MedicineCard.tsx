@@ -5,17 +5,23 @@ import { Badge } from '@/components/ui/badge';
 import { Medicine } from '@/types/pharmacy';
 import { sampleBatches } from '@/data/sampleData';
 import { cn } from '@/lib/utils';
+import { useNavigate } from 'react-router-dom';
 
 interface MedicineCardProps {
-  medicine: Medicine;
+  medicine: Medicine;a
   onEdit: (medicine: Medicine) => void;
   onDelete: (medicineId: string) => void;
 }
 
 export const MedicineCard = ({ medicine, onEdit, onDelete }: MedicineCardProps) => {
+  const navigate = useNavigate();
   const batches = sampleBatches.filter(batch => batch.medicineId === medicine.id);
   const totalStock = batches.reduce((sum, batch) => sum + batch.quantity, 0);
   const isLowStock = totalStock < 50;
+
+  const handleEdit = () => {
+    navigate("/update-medicine", { state: { medicine } });
+  };
 
   const sixMonthsFromNow = new Date();
   sixMonthsFromNow.setMonth(sixMonthsFromNow.getMonth() + 6);
@@ -35,7 +41,7 @@ export const MedicineCard = ({ medicine, onEdit, onDelete }: MedicineCardProps) 
             </div>
           </div>
           <div className="flex space-x-1">
-            <Button variant="ghost" size="sm" className="hover:bg-blue-50" onClick={() => onEdit(medicine)}>
+            <Button variant="ghost" size="sm" className="hover:bg-blue-50" onClick={handleEdit}>
               <Edit className="h-4 w-4 text-gray-700" />
             </Button>
             <Button variant="ghost" size="sm" className="hover:bg-red-50" onClick={() => onDelete(medicine.id)}>

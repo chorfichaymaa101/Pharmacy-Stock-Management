@@ -1,4 +1,5 @@
 import { Medicine, Batch, Supplier, Sale, StockAlert, DashboardMetrics, ActivityItem } from '@/types/pharmacy';
+import { Settings, User, Bell, Shield, Database, Palette } from 'lucide-react';
 
 export const sampleMedicines: Medicine[] = [
   {
@@ -256,6 +257,173 @@ export const sampleRecentActivity: ActivityItem[] = [
     description: 'Stock adjusted for Lisinopril batch LIS003',
     timestamp: new Date('2024-01-19T16:20:00'),
     userId: 'user1',
+  },
+];
+
+// settings sections data
+export const settingsSections = [
+    {
+      title: 'Profile Settings',
+      icon: User,
+      description: 'Manage your account and personal information',
+      items: [
+        { label: 'Update Profile', action: 'profile' },
+        { label: 'Change Password', action: 'password' },
+        { label: 'Two-Factor Authentication', action: '2fa' },
+      ],
+    },
+    {
+      title: 'Notifications',
+      icon: Bell,
+      description: 'Configure alert and notification preferences',
+      items: [
+        { label: 'Low Stock Alerts', action: 'low_stock', toggle: true },
+        { label: 'Expiry Warnings', action: 'expiry', toggle: true },
+        { label: 'Email Notifications', action: 'email', toggle: true },
+      ],
+    },
+    {
+      title: 'Security',
+      icon: Shield,
+      description: 'Security and access control settings',
+      items: [
+        { label: 'User Permissions', action: 'permissions' },
+        { label: 'Session Management', action: 'sessions' },
+        { label: 'Audit Logs', action: 'audit' },
+      ],
+    },
+    {
+      title: 'System',
+      icon: Database,
+      description: 'System configuration and maintenance',
+      items: [
+        { label: 'Backup Settings', action: 'backup' },
+        { label: 'Data Export', action: 'export' },
+        { label: 'System Status', action: 'status' },
+      ],
+    },
+  ];
+
+// Sample data for charts
+export const sampleReports = {
+  'Stock Summary': [
+    { name: 'Paracetamol', quantity: 120 },
+    { name: 'Ibuprofen', quantity: 80 },
+    { name: 'Amoxicillin', quantity: 50 },
+  ],
+  'Sales Report': [
+    { name: 'Week 1', revenue: 5000 },
+    { name: 'Week 2', revenue: 7000 },
+    { name: 'Week 3', revenue: 6000 },
+  ],
+  'Expiry Report': [
+    { name: 'Expired', value: 10 },
+    { name: 'Expiring Soon', value: 20 },
+    { name: 'Safe', value: 70 },
+  ],
+  'Usage Trends': [
+    { name: 'Paracetamol', value: 200 },
+    { name: 'Ibuprofen', value: 150 },
+    { name: 'Amoxicillin', value: 100 },
+  ],
+};
+// Sample sales data
+
+export const sampleSales = [
+  {
+    id: 'sale1',
+    saleNumber: 'S-2024-001',
+    customerName: 'John Doe',
+    customerPhone: '+1-555-0123',
+    saleDate: new Date('2024-01-20'),
+    totalAmount: 45.50,
+    discount: 2.25,
+    finalAmount: 43.25,
+    paymentMethod: 'cash' as const,
+    status: 'completed' as const,
+    itemCount: 3,
+  },
+  {
+    id: 'sale2',
+    saleNumber: 'S-2024-002',
+    customerName: 'Sarah Johnson',
+    customerPhone: '+1-555-0124',
+    saleDate: new Date('2024-01-20'),
+    totalAmount: 120.00,
+    discount: 0,
+    finalAmount: 120.00,
+    paymentMethod: 'card' as const,
+    status: 'completed' as const,
+    itemCount: 5,
+  },
+  {
+    id: 'sale3',
+    saleNumber: 'S-2024-003',
+    customerName: 'Mike Wilson',
+    saleDate: new Date('2024-01-19'),
+    totalAmount: 78.25,
+    discount: 5.00,
+    finalAmount: 73.25,
+    paymentMethod: 'insurance' as const,
+    status: 'pending' as const,
+    itemCount: 2,
+  },
+  {
+    id: 'sale4',
+    saleNumber: 'S-2024-004',
+    customerName: 'Emma Davis',
+    customerPhone: '+1-555-0126',
+    saleDate: new Date('2024-01-19'),
+    totalAmount: 95.75,
+    discount: 0,
+    finalAmount: 95.75,
+    paymentMethod: 'card' as const,
+    status: 'completed' as const,
+    itemCount: 4,
+  },
+];
+
+export const sampleOrders = [
+  {
+    id: 'PO001',
+    orderNumber: 'PO-2024-001',
+    supplier: 'MediCore Pharmaceuticals',
+    status: 'pending' as const,
+    orderDate: new Date('2024-01-18'),
+    expectedDelivery: new Date('2024-01-25'),
+    totalAmount: 2500.0,
+    itemCount: 5,
+  },
+  {
+    id: 'PO002',
+    orderNumber: 'PO-2024-002',
+    supplier: 'Global Health Supply',
+    status: 'received' as const,
+    orderDate: new Date('2024-01-15'),
+    expectedDelivery: new Date('2024-01-22'),
+    actualDelivery: new Date('2024-01-21'),
+    totalAmount: 1800.5,
+    itemCount: 3,
+  },
+  {
+    id: 'PO003',
+    orderNumber: 'PO-2024-003',
+    supplier: 'Premium Drug Solutions',
+    status: 'partial' as const,
+    orderDate: new Date('2024-01-10'),
+    expectedDelivery: new Date('2024-01-20'),
+    totalAmount: 3200.75,
+    itemCount: 8,
+  },
+  {
+    id: 'PO004',
+    orderNumber: 'PO-2024-004',
+    supplier: 'MediCore Pharmaceuticals',
+    status: 'delayed' as const,
+    orderDate: new Date('2024-01-05'),
+    expectedDelivery: new Date('2024-01-15'),
+    totalAmount: 1450.25,
+    itemCount: 4,
   },
 ];
 
