@@ -8,7 +8,7 @@ import { cn } from '@/lib/utils';
 import { useNavigate } from 'react-router-dom';
 
 interface MedicineCardProps {
-  medicine: Medicine;a
+  medicine: Medicine;
   onEdit: (medicine: Medicine) => void;
   onDelete: (medicineId: string) => void;
 }
