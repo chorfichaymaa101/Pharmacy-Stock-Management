@@ -25,37 +25,46 @@ A modern, responsive **React** application designed for pharmacy inventory and s
   - Recent activity log with timestamps
 
 ### Medicines Management
+![Dashboard Screenshot](assets/medicines.png)
 - List all medicines with **search** and **category filters**.
 - **Add**, **Edit**, and **Delete** medicine entries.
 - Export medicine data to **Excel** using `xlsx` and `file-saver`.
 - Medicine cards displaying key details like stock, pricing, and supplier.
 
 ### Stock Management
+![Dashboard Screenshot](assets/stock.png)
 - Track current stock levels.
 - Update stock information and monitor low stock alerts.
 - Visual progress bars for quick stock assessment.
 
 ### Suppliers & Purchase Orders
+![Dashboard Screenshot](assets/suppliers.png)
 - Manage supplier information.
+![Dashboard Screenshot](assets/purchase.png)
 - Track purchase orders and fulfillment status.
 
 ### Sales Tracking
+![Dashboard Screenshot](assets/sales.png)
 - Record daily sales and monitor revenue trends.
 - Dashboard displays sales metrics at a glance.
 
 ### Reports
+![Dashboard Screenshot](assets/reports.png)
 - Generate reports for medicines, stock, sales, and alerts.
 - Exportable for offline review and audits.
 
 ### Alerts & Notifications
+![Dashboard Screenshot](assets/alerts.png)
 - Low stock and expiry alerts.
 - Visual indicators for urgent actions.
 
 ### Activity Log
+![Dashboard Screenshot](assets/activity.png)
 - Track all pharmacy activities and transactions.
 - Filter and export activity logs.
 
 ### Settings
+![Dashboard Screenshot](assets/setting.png)
 - Manage system preferences and toggle options with modern switches.
 - Select appearance themes (Medical Blue, Health Green, Pharmacy Gold) with gradients and hover effects.
 
