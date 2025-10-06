@@ -15,6 +15,13 @@ import AlertsPage from "./pages/AlertsPage";
 import ActivityPage from "./pages/ActivityPage";
 import SettingsPage from "./pages/SettingsPage";
 import NotFound from "./pages/NotFound";
+import { AddMedicineForm } from "./pages/AddMedecineForm";
+import { UpdateMedicineForm } from "./pages/UpdateMedicineForm";
+import { UpdateStockForm } from "./pages/UpdateStockForm";
+import { AddSupplierForm } from "./pages/AddSupplierForm";
+import { EditSupplierForm } from "./pages/EditSupplierForm";
+import { AddOrderForm } from "./pages/AddOrderForm";
+import { AddSaleForm } from "./pages/AddSaleForm";
 
 const queryClient = new QueryClient();
 
@@ -36,8 +43,15 @@ const App = () => (
             <Route path="alerts" element={<AlertsPage />} />
             <Route path="activity" element={<ActivityPage />} />
             <Route path="settings" element={<SettingsPage />} />
+            <Route path="/add-medicine" element={<AddMedicineForm />} />
+            <Route path="/update-medicine" element={<UpdateMedicineForm />} />
+            <Route path="/update-stock" element={<UpdateStockForm />} />
+            <Route path="/add-supplier" element={<AddSupplierForm />} />
+            <Route path="/edit-supplier/:id" element={<EditSupplierForm />} />
+            <Route path="/add-order" element={<AddOrderForm />} />
+            <Route path="/add-sale" element={<AddSaleForm />} />
+          
           </Route>
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
