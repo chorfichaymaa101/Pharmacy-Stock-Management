@@ -9,6 +9,7 @@ A modern, responsive **React** application designed for pharmacy inventory and s
 ------------
 
 ### Dashboard
+![Dashboard Screenshot](assets/dashboard.png)
 - **Welcome Section:** Personalized greeting and today's date.
 - **Key Metrics:**  
   - Total Medicines  
